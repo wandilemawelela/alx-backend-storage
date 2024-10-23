@@ -2,6 +2,7 @@ import redis
 import uuid
 from typing import Union
 
+
 class Cache:
     def __init__(self):
         self._redis = redis.Redis()
@@ -12,7 +13,7 @@ class Cache:
         self._redis.set(key, data)
         return key
 
-# Example usage:
+
 if __name__ == "__main__":
     cache = Cache()
     key = cache.store("sample data")
